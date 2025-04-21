@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://mern-fsd-login-client-a8jux9xi1-shahid0mers-projects.vercel.app",
+      "https://mern-login-frontend-uxov.onrender.com",
     ],
     credentials: true,
   })

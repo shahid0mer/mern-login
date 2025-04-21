@@ -21,23 +21,31 @@ const Login = () => {
 
     try {
       if (state === "Sign up") {
-        const { data } = await axios.post(backEndUrl + "/api/auth/register", {
-          name,
-          email,
-          password,
-        }, { withCredentials: true});
+        const { data } = await axios.post(
+          backEndUrl + "/api/auth/register",
+          {
+            name,
+            email,
+            password,
+          },
+          { withCredentials: true }
+        );
         if (data.success) {
           setisLoggedIn(true);
           getUserdata();
           navigate("/");
         } else {
-          toast.error(data.message);
+          toast.success(data.message);
         }
       } else {
-        const { data } = await axios.post(backEndUrl + "/api/auth/login", {
-          email,
-          password,
-        },{ withCredentials: true});
+        const { data } = await axios.post(
+          backEndUrl + "/api/auth/login",
+          {
+            email,
+            password,
+          },
+          { withCredentials: true }
+        );
         console.log("Response:", data); // Log response data
 
         if (data.success) {

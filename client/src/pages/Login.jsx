@@ -25,7 +25,7 @@ const Login = () => {
           name,
           email,
           password,
-        });
+        } { withCredentials: true});
         if (data.success) {
           setisLoggedIn(true);
           getUserdata();
@@ -37,7 +37,7 @@ const Login = () => {
         const { data } = await axios.post(backEndUrl + "/api/auth/login", {
           email,
           password,
-        });
+        },{ withCredentials: true});
         console.log("Response:", data); // Log response data
 
         if (data.success) {

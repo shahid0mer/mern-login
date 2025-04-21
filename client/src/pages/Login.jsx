@@ -25,7 +25,7 @@ const Login = () => {
           name,
           email,
           password,
-        } { withCredentials: true});
+        }, { withCredentials: true});
         if (data.success) {
           setisLoggedIn(true);
           getUserdata();

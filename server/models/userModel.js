@@ -5,9 +5,9 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   isAccountVerified: { type: Boolean, default: false },
-  verifyOtp: { type: Number, default: "" },
+  verifyOtp: { type: Number, default: null },
   verifyOtpExpiresAt: { type: Number, default: 0 },
-  resetOtp: { type: Number, default: "" },
+  resetOtp: { type: Number, default: null },
   resetOtpExpiresAt: { type: Number, default: 0 },
 });
 
